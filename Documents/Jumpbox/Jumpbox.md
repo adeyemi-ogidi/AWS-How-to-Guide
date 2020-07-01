@@ -94,7 +94,7 @@ We assume 1 Public Subnet and 1 Private Subnet exist.
     
       - select the NATSG security group that you created
 
-  - ![](.//media/image6.png)
+![](.//media/image6.png)
 
   - Choose Review and Launch.
 
@@ -117,9 +117,9 @@ instance.
     Otherwise, choose Yes,
 Disable.
 
-  - ![](.//media/image7.png)
+![](.//media/image7.png)
 
-  - ![](.//media/image8.png)
+![](.//media/image8.png)
 
 ## Update the Route Table used in your Private Subnet to send all subnet traffic to the NAT Instance
 
@@ -131,7 +131,7 @@ Disable.
     the Destination box, select the instance ID of the NAT instance
     from the Target list, and then choose Save.
 
-  - ![](.//media/image9.png)
+![](.//media/image9.png)
 
 ## Configure NAT connectivity to internet
 
@@ -159,7 +159,7 @@ Disable.
     select Custom from the Destination list. Enter 0.0.0.0/0, and then
     choose Save.
 
-  - ![](.//media/image11.png)
+![](.//media/image11.png)
 
   - Launch an EC2 instance into your private subnet ensuring to set on
     the Configure Instance Details:
@@ -170,7 +170,7 @@ Disable.
     
       - Autoassign Public IP = leave the default or set Disable
 
-  - ![](.//media/image12.png)
+![](.//media/image12.png)
 
   - On the Configure Security Group page, ensure that your security
     group includes an inbound rule that allows SSH access from your NAT
@@ -199,16 +199,12 @@ Disable.
     forwarding option, and leave the Private key file for
     authentication field blank.
 
-  - ![](.//media/image13.png)
+![](.//media/image13.png)
 
   - connect to your instance
 
   - Test that your NAT instance can communicate with the internet by
     running the ping command for a website; for example:
-
-  - 
-  - 
-  - 
 <!-- end list -->
 
   - \- ![](.//media/image14.png)
@@ -221,7 +217,7 @@ Disable.
   - From your private instance, test that you can connect to the
     internet by running the ping command:
 
-  - ![](.//media/image16.png)
+![](.//media/image16.png)
 
   - Press Ctrl+C on your keyboard to cancel the ping command.
 
