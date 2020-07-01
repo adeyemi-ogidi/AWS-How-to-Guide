@@ -207,7 +207,7 @@ Disable.
     running the ping command for a website; for example:
 <!-- end list -->
 
-  - \- ![](.//media/image14.png)
+![](.//media/image14.png)
 
   - From your NAT instance, connect to your instance in your private
     subnet by using its private IP address, for example:
