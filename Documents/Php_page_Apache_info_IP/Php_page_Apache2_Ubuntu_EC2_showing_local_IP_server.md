@@ -82,4 +82,4 @@
 ## Cleanup
 
 Once you are done with this task, terminate the EC2 instance from the
-EC2 AWS console.
+EC2 AWS console. Please be aware tha terminating the EC2 instance you will lose anything saved on it.
