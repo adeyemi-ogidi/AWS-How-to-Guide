@@ -89,6 +89,6 @@ Once the task is completed:
 
   - Terminate the EC2 instances
 
-  - Terminate the Load Balancer
+  - Delete the Load Balancer
 
   - Delete the Target group
