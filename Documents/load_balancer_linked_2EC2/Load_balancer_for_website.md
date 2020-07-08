@@ -2,14 +2,12 @@
 
 ## Prerequisite
 
-  - Created a virtual private cloud (VPC) with one public subnet in two
-    or more Availability Zones, no need to have a public IP attached
+  - A virtual private cloud (VPC) with one public subnet in two
+    or more Availability Zones exists
 
-  - Have 2 EC2 instances up and running, each of them hosting a php page
-    on apache server
+  - Have 2 EC2 instances up and running on 2 public subnets (in 2 differents AZ), each of them hosting a php page on apache server
 
-  - The php page name is index.php and shows the private IP of the EC2
-    that hosts it
+  - The php page name is index.php and shows the private IP of the EC2 that hosts it
 
 ## Configure the Load Balancer
 
