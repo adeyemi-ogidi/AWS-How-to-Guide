@@ -83,3 +83,4 @@
 
 Once you are done with this task, terminate the EC2 instance from the
 EC2 AWS console. Please be aware tha terminating the EC2 instance you will lose anything saved on it.
+[To see how to terminate an instance, please click here](https://github.com/asonnellini/AWS-How-to-Guide/blob/master/Documents/Create_EC2/Create_an_EC2_Instance.md#terminate-your-ec2-instances)
