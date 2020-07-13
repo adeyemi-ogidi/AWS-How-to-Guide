@@ -8,9 +8,9 @@
 ![](.//media/image1.png)
 
   - In this example the file index.php contains the following php code:
-    
+    ```
     \<?php echo $\_SERVER\['SERVER\_ADDR'\]; ?\>
-
+    ```
   - Create an EC2 instance that has the **awscli** package installed
     (for example the AMAZON Linux AMI) and check if you are able to
     download a file from a non-public S3 bucket running the following
@@ -31,7 +31,7 @@
 
   - Choose Roles, and then choose Create role.
 
-> ![](.//media/image4.png)
+![](.//media/image4.png)
 
   - Select AWS Service, and then choose EC2
 
