@@ -4,9 +4,9 @@
 
 Depending on whether you will use UBUNTU AMI or LINUX AMI you should use
 one of the 2 below scripts – attached on this github page you can find
-attached the 2 scripts.
+2 scripts "ready" for use.
 
-### Ubuntu
+### Ubuntu (install_apache_php_ubuntu.sh)
 
 \#\!/bin/bash
 
@@ -19,7 +19,7 @@ apt-get -y install php libapache2-mod-php
 echo "\<?php echo \\$\_SERVER\['SERVER\_ADDR'\]; ?\>" \>
 /var/www/html/index.php
 
-### Linux
+### Linux (install_apache_php_linux.sh)
 
 \#\!/bin/bash
 
