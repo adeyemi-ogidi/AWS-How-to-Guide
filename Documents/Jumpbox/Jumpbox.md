@@ -1,5 +1,44 @@
 # Nat and Jumpbox
 
+## EDIT on 13 July 2020
+
+After some practice on AWS, I now realize that the setup about Security
+groups described in this document is suboptimal.
+
+Indeed Security Groups Inbound Rules can target as Source another
+Security Group. This means that only traffic coming from the components
+that link the specified Security Group will be allowed, realizing a more
+constrained (and safe) Security Group Structure at Application level.
+
+In particular, the setup described in this document could have been
+improved with the following:
+
+  - SG\_NAT: Security Group for the NAT instance, Inbound Rule
+    
+      - Allow HTTP/HTTPs from any source
+    
+      - Allow SSH from any source
+
+  - SG\_Private: Security Group for the NAT instance, Inbound Rule:
+    
+      - Allow HTTP/HTTPs only from SG\_NAT
+    
+      - Allow SSH only from the bridge-machine, in our case it was the
+        NAT having SG\_NAT
+
+## Target
+
+Be able to ping google.com from an EC2 instance deployed in a Private
+Network and having no Public IP.
+
+To achieve this I deployed a NAT instance in the Public Subnet that
+re-route traffic requests from the Private EC2 to the internet gateway.
+The NAT instance is used also as a bridge -machine to connect from the
+public Internet to the Private instance.
+
+Alternatively, we could have deployed another Public EC2 as
+bridge-machine
+
 ## Assumptions
 
 We assume 1 Public Subnet and 1 Private Subnet exist.
@@ -94,7 +133,7 @@ We assume 1 Public Subnet and 1 Private Subnet exist.
     
       - select the NATSG security group that you created
 
-![](.//media/image6.png)
+  - ![](.//media/image6.png)
 
   - Choose Review and Launch.
 
@@ -110,15 +149,21 @@ instance.
 
   - In the navigation pane, choose Instances.
 
-  - Select the NAT instance, choose Actions, Networking, Change
-    Source/Dest. Check.
+  - Select the NAT instance
+    
+      - choose Actions
+        
+          - Networking
+            
+              - Change Source/Dest. Check.
 
   - For the NAT instance, verify that this attribute is disabled.
     Otherwise, choose Yes,
 Disable.
 
-![](.//media/image7.png)
+> ![](.//media/image7.png)
 
+  - 
 ![](.//media/image8.png)
 
 ## Update the Route Table used in your Private Subnet to send all subnet traffic to the NAT Instance
@@ -131,7 +176,8 @@ Disable.
     the Destination box, select the instance ID of the NAT instance
     from the Target list, and then choose Save.
 
-![](.//media/image9.png)
+  - 
+> ![](.//media/image9.png)
 
 ## Configure NAT connectivity to internet
 
@@ -170,7 +216,8 @@ Disable.
     
       - Autoassign Public IP = leave the default or set Disable
 
-![](.//media/image12.png)
+  - 
+> ![](.//media/image12.png)
 
   - On the Configure Security Group page, ensure that your security
     group includes an inbound rule that allows SSH access from your NAT
@@ -199,15 +246,14 @@ Disable.
     forwarding option, and leave the Private key file for
     authentication field blank.
 
-![](.//media/image13.png)
+  - ![](.//media/image13.png)
 
   - connect to your instance
 
   - Test that your NAT instance can communicate with the internet by
     running the ping command for a website; for example:
-<!-- end list -->
 
-![](.//media/image14.png)
+> ![](.//media/image14.png)
 
   - From your NAT instance, connect to your instance in your private
     subnet by using its private IP address, for example:
@@ -217,7 +263,7 @@ Disable.
   - From your private instance, test that you can connect to the
     internet by running the ping command:
 
-![](.//media/image16.png)
+> ![](.//media/image16.png)
 
   - Press Ctrl+C on your keyboard to cancel the ping command.
 
