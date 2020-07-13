@@ -64,8 +64,11 @@ echo "\<?php echo \\$\_SERVER\['SERVER\_ADDR'\]; ?\>" \>
     PublicIP\>/index.php
 
   - The private IP of the EC2 instance should be displayed
-
+    - Linux
+  
 ![](.//media/image5.png)
+
+    - Ubuntu
 
 ![](.//media/image6.png)
 
