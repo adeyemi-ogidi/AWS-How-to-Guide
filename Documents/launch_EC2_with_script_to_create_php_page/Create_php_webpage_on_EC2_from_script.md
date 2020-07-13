@@ -68,7 +68,8 @@ echo "\<?php echo \\$\_SERVER\['SERVER\_ADDR'\]; ?\>" \>
   
 ![](.//media/image5.png)
 
-    - Ubuntu
+   - Ubuntu
+
 
 ![](.//media/image6.png)
 
