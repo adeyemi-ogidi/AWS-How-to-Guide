@@ -33,7 +33,7 @@ echo "\<?php echo \\$\_SERVER\['SERVER\_ADDR'\]; ?\>" \>
 /var/www/html/index.php
 
 ## Create the EC2 adding the script to User Data
-
+  - From the EC2 Console Management, click on Launch Instance
   - AMI: Select either:
     
       - An Amazon Linux AMI (do **NOT** select Amazon Linux 2)
