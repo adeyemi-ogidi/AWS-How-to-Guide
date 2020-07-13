@@ -7,7 +7,7 @@
 
 ![](.//media/image1.png)
 
-  - Also in the example the file contains the following php code:
+  - In this example the file index.php contains the following php code:
     
     \<?php echo $\_SERVER\['SERVER\_ADDR'\]; ?\>
 
