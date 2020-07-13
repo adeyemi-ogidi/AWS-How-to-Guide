@@ -17,14 +17,14 @@ improved with the following:
     
       - Allow HTTP/HTTPs from any source
     
-      - Optionally allow SSH from any source
+      - Allow SSH from any source
 
   - SG\_Private: Security Group for the NAT instance, Inbound Rule:
     
       - Allow HTTP/HTTPs only from SG\_NAT
     
       - Allow SSH only from the bridge-machine, in our case it was the
-        NAT and so SSH can be accepted by applications having SG\_NAT
+        NAT having SG\_NAT
 
 ## Target
 
