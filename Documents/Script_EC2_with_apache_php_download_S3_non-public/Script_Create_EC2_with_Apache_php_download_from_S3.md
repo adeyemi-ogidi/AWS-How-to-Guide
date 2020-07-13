@@ -87,7 +87,7 @@ Copy the below content in a script to be used as User Data to be run
 when the EC2 is created – attached on github you can find the script I
 used to test (install\_apache\_php\_linux\_and\_download\_from\_S3.sh)
 ```
-\#\!/bin/bash
+#!/bin/bash
 yum update -y
 yum install -y httpd24 php56 php56-mysqlnd
 service httpd start
