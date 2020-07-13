@@ -1,4 +1,4 @@
-# How to create EC2 with User Data script such that it downloads from non-public S3 bucket an index.php page and publish it on the web
+# How to create EC2 with User Data script that downloads from non-public S3 bucket an index.php page and publish it on the web
 
 ## Preliminary checks and attempts
 
