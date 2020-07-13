@@ -1,7 +1,7 @@
 # AWS-How-to-Guide
 This repository collects the documentation I produced while working on AWS Environment
 
-## List of tasks documented so far:
+## Tasks documented so far:
 
   - [How to create a VPC and a Private or Public Subnet](https://github.com/asonnellini/AWS-How-to-Guide/blob/master/Documents/Create_VPC_and_Subnets/How_to_create_a_VPC_and_Private_or_Public_Subnet.md)
   - [How to launch and connect to an EC2 instance](https://github.com/asonnellini/AWS-How-to-Guide/blob/master/Documents/Create_EC2/Create_an_EC2_Instance.md)
