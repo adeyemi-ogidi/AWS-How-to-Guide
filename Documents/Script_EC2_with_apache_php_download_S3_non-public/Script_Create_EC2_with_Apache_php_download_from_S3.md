@@ -18,7 +18,7 @@
     ```
     aws s3 cp s3://\<Bucket name\>/\<file name\> \<path/file name where to save the file on the EC2 instance\>
     ```
-  - In my case I received the below error
+  - In my case I received the below error, which pointed me to a permission issue - searching online I came to know AMI roles, please see below
     
     ![](.//media/image2.png)
 
