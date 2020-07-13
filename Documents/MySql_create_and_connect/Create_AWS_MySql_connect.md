@@ -41,7 +41,7 @@
       - Create DB Subnet Group selecting your VPC and 2 subnets
         belonging to 2 different AZ
 
-  - Ensure you have a Security Group that allows incoming traffic
+  - Ensure you have a Security Group that allows incoming traffic (at least TCP traffic toward the port of the RDS (for MySql default port is 3306))
 
   - Start again the procedure to create the DB and ensure to select:
     
