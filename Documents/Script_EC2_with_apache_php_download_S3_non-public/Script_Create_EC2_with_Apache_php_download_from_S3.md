@@ -15,10 +15,10 @@
     (for example the AMAZON Linux AMI) and check if you are able to
     download a file from a non-public S3 bucket running the following
     command
-    
+    ```
     aws s3 cp s3://\<Bucket name\>/\<file name\> \<path/file name where
     save the file on the EC2 instance\>
-
+    ```
   - In my case I received the below error
     
     ![](.//media/image2.png)
@@ -72,10 +72,11 @@
 
   - Once the instance is up and running connect to it, re-rerun the
     command and check that the file in the S3 bucket gets downloaded:
-
-> aws s3 cp s3://\<Bucket name\>/\<file name\> \<path/file name where
-> save the file on the EC2 instance\>
-
+    ```
+    aws s3 cp s3://\<Bucket name\>/\<file name\> \<path/file name where
+    save the file on the EC2 instance\>
+    ```
+    
 ![](.//media/image10.png)
 
   - Note: depending on the permissions of your ec2 user, you may need to
