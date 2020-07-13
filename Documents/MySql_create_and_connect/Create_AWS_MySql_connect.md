@@ -24,13 +24,10 @@
 
 ![](.//media/image3.png)
 
-  - Click Create database
-
-  - To check that the database is ready, from the RDS management
-    console, click on the database and check that the field Info shows
-    available
 
 ![](.//media/image4.png)
+
+  - Click Create database - the following error was displayed
 
 ![](.//media/image5.png)
 
@@ -44,7 +41,7 @@
       - Create DB Subnet Group selecting your VPC and 2 subnets
         belonging to 2 different AZ
 
-  - Ensure you have a Security Group that allows incoming traffic
+  - Ensure you have a Security Group that allows incoming traffic (at least TCP traffic toward the port of the RDS (for MySql default port is 3306))
 
   - Start again the procedure to create the DB and ensure to select:
     
@@ -56,7 +53,7 @@
 
 > ![](.//media/image6.png)
 
-  - Click Create database error
+  - Click Create database - the below error is shown 
 
 ![](.//media/image7.png)
 
@@ -120,8 +117,8 @@
 
   - On AWS DB maintenance Console select the DB
 
-  - Actions
+    - Actions
 
-  - Delete
+    - Delete
 
-  - CHECK IF YOU WANT TO TAKE A FINAL SNAPSHOT
+    - CHECK IF YOU WANT TO TAKE A FINAL SNAPSHOT
