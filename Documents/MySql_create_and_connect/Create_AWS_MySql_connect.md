@@ -24,13 +24,15 @@
 
 ![](.//media/image3.png)
 
-  - Click Create database
+  - Click Create database - the following error was displayed
+
+
+![](.//media/image4.png)
 
   - To check that the database is ready, from the RDS management
     console, click on the database and check that the field Info shows
     available
 
-![](.//media/image4.png)
 
 ![](.//media/image5.png)
 
@@ -120,8 +122,8 @@
 
   - On AWS DB maintenance Console select the DB
 
-  - Actions
+    - Actions
 
-  - Delete
+    - Delete
 
-  - CHECK IF YOU WANT TO TAKE A FINAL SNAPSHOT
+    - CHECK IF YOU WANT TO TAKE A FINAL SNAPSHOT
