@@ -24,15 +24,10 @@
 
 ![](.//media/image3.png)
 
-  - Click Create database - the following error was displayed
-
 
 ![](.//media/image4.png)
 
-  - To check that the database is ready, from the RDS management
-    console, click on the database and check that the field Info shows
-    available
-
+  - Click Create database - the following error was displayed
 
 ![](.//media/image5.png)
 
@@ -58,7 +53,7 @@
 
 > ![](.//media/image6.png)
 
-  - Click Create database error
+  - Click Create database - the below error is shown 
 
 ![](.//media/image7.png)
 
