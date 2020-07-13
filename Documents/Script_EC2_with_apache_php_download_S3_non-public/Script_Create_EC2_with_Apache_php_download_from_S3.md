@@ -16,8 +16,7 @@
     download a file from a non-public S3 bucket running the following
     command
     ```
-    aws s3 cp s3://\<Bucket name\>/\<file name\> \<path/file name where
-    save the file on the EC2 instance\>
+    aws s3 cp s3://\<Bucket name\>/\<file name\> \<path/file name where to save the file on the EC2 instance\>
     ```
   - In my case I received the below error
     
@@ -80,25 +79,20 @@
 ![](.//media/image10.png)
 
   - Note: depending on the permissions of your ec2 user, you may need to
-    run the same command adding **sudo** at the
-beginning
+    run the same command adding **sudo** at the beginning
 
 ## Create the script to create an EC2 instance that download a php file from S3 and publish it on the web 
 
 Copy the below content in a script to be used as User Data to be run
 when the EC2 is created – attached on github you can find the script I
 used to test (install\_apache\_php\_linux\_and\_download\_from\_S3.sh)
-
-> \#\!/bin/bash
-> 
-> yum update -y
-> 
-> yum install -y httpd24 php56 php56-mysqlnd
-> 
-> service httpd start
-> 
-> aws s3 cp s3://php-bucket-for/index.php /var/www/html/index.php
-
+```
+\#\!/bin/bash
+yum update -y
+yum install -y httpd24 php56 php56-mysqlnd
+service httpd start
+aws s3 cp s3://php-bucket-for/index.php /var/www/html/index.php
+```
 ## Test the script
 
   - Create an Amazon LINUX AMI EC2 that can connect to Internet and
