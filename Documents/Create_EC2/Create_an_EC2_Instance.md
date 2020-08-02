@@ -79,6 +79,18 @@
 
 ![](.//media/image9.png)
 
+## Ping your EC2 instance
+
+  - We assume the EC2 instance is running on a Public Subnet and its
+    Security group allows incoming ICMP traffic
+
+  - From the EC2 Control Panel Retrieve the Public IP of your EC2
+    instance, e.g. 54.89.204.77
+
+  - Open a terminal in your pc and type
+    
+    ping 54.89.204.77
+
 # Connect to an EC2 Instance from Windows
 
 ## Assumption
@@ -189,15 +201,4 @@
 
 ## 
 
-## Ping your EC2 instance
 
-  - 
-  - We assume the EC2 instance is running on a Public Subnet and its
-    Security group allows incoming ICMP traffic
-
-  - From the EC2 Control Panel Retrieve the Public IP of your EC2
-    instance, e.g. 54.89.204.77
-
-  - Open a terminal in your pc and type
-    
-    ping 54.89.204.77
