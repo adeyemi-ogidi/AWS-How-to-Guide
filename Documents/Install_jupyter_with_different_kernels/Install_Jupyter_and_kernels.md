@@ -1,4 +1,4 @@
-# Install Jupyter and and link notebooks to various conda environments
+# Install Jupyter and and link it to various conda environments
 
   - Launch an EC2 instance ensuring to enable incoming traffic on port
     8888 on the Security Group and connect to it
@@ -71,3 +71,12 @@
     environment of your interest:
 
 ![](.//media/image3.png)
+
+## Clean-up
+
+Before terminating the instance, make sure to save the files/objects of
+your interest and ensure all runs/simulations of your interest are done.
+
+For example you can save them in an S3 bucket.
+
+After that, terminate EC2 instance.
