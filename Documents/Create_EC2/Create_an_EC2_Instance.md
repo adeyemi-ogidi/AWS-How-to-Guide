@@ -93,11 +93,19 @@
 
 # Connect to an EC2 Instance from Windows
 
+You can connect to an EC2 instance from Windows using either:
+
+  - Putty (3rd party sw)
+
+  - The Windows terminal
+
+Both the procedures will be shown in this tutorial.
+
 ## Assumption
 
   - We assume that an EC2 Instance was created in a public Subnet
 
-## Procedure
+## Procedure 1 - Putty
 
   - Download and install Putty
 
@@ -185,8 +193,6 @@
   - **Note:** Terminate your instances if not needed - see How to
     terminate your EC2 instances
 
-## 
-
 ## Terminate your EC2 instances
 
   - From the EC2 Console, select the EC2 you want to terminate
@@ -199,6 +205,71 @@
 
 ![](.//media/image13.png)
 
-## 
+## Procedure 2 – Windows Terminal
 
+**Assumption:** We assume that the Windows SSH client is installed and
+enabled on your Windows Machine.
 
+  - From the EC2 Console, select your instance and click on Connect –
+    the following window will open-up, showing the ssh command that you
+    can run from the Windows Terminal
+
+![](.//media/image14.png)
+
+  - Open a Windows Terminal and copy the ssh command highlighted in the
+    above screenshot
+
+  - Type “yes” when asked about the authenticity of the ec2 machine
+
+![](.//media/image15.png)
+
+  - After that, you may receive the following error:
+
+![](.//media/image16.png)
+
+  - To solve it, open the folder where the key is located, and right
+    click on the key (.pem file) itself
+    
+      - Properties
+    
+      - Security
+    
+      - Advanced
+
+![](.//media/image17.png)
+
+  - In the subsequent tab, click on Disable Inheritance + Remove all
+    inherited permissions from this object
+
+![](.//media/image18.png)
+
+![](.//media/image19.png)
+
+  - Permission Entries will become empty
+
+  - Click on Add and then on Select a principal
+
+![](.//media/image20.png)
+
+  - In the following window type the User that should grant permissions
+    on the file, and click on Check Names; Windows should identify the
+    correct user you are referring to; click OK
+
+![](.//media/image21.png)
+
+  - In the Permission entry window tick the option Full control + OK
+
+![](.//media/image22.png)
+
+  - The final view should show only one entry for the User that was
+    granted with Full control over the key file; note in the below
+    screenshot some values were obfuscated for safety reasons
+
+![](.//media/image23.png)
+
+  - Click OK
+
+  - Retry from the Windows terminal to run the ssh command – you should
+    be able to connect successfully
+
+> ![](.//media/image24.png)
