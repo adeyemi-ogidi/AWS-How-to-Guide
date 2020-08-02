@@ -1,4 +1,4 @@
-# Install Jupyter and and link it to various conda environments
+# Install Jupyter and and link notebooks to various conda environments
 
   - Launch an EC2 instance ensuring to enable incoming traffic on port
     8888 on the Security Group and connect to it
