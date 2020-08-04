@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Translation Service</title>
+    <!-- Add some CSS to change client UI -->
+    <style>
+    body {
+        background-color: #232F3E;
+        }
+    label, button {
+        color: #FF9900;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        margin-left: 40px;
+        }
+     input {
+        color: #232F3E;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        margin-left: 20px;
+        }
+      div{
+		color: #FF9900;
+		font-size: 20px;
+      {
+    </style>
+    <script>
+        // define the callAPI function that takes a first name and last name as parameters
+        var callAPI = (text,targetLang)=>{
+            // instantiate a headers object
+            var myHeaders = new Headers();
+            // add content type header to object
+            myHeaders.append("Content-Type", "application/json");
+            // using built in JSON utility package turn object to string and store in a variable
+            var raw = JSON.stringify({"sourceText":text,"lang":targetLang});
+            // create a JSON object with parameters for API call and store in a variable
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+            // make API call with parameters and use promises to get response
+            fetch("https://2zzv2bm234.execute-api.us-east-1.amazonaws.com/dev/translate", requestOptions)
+            .then(response => response.text())
+            .then(result => alert(JSON.parse(result).body))
+            .catch(error => console.log('error', error));
+        }
+    </script>
+</head>
+<body>
+	<div id="articleLongDescription">This page translates an input text written in French in the desired language leveraging AWS Translate Service. The target language should be specified via <a href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html#what-is-languages">Amazon language codes</a>.</div>
+    <form>
+        <label>Type your text in french:</label>
+        <input type="text" id="source-text">
+        <label>Type the target language - e.g. en</label>
+        <input type="text" id="target-lan">
+        <!-- set button onClick method to call function we defined passing input values as parameters -->
+        <button type="button" onclick="callAPI(document.getElementById('source-text').value,document.getElementById('target-lan').value)">Call API</button>
+    </form>
+</body>
+</html>
