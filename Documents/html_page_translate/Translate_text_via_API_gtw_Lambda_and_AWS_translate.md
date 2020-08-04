@@ -36,9 +36,9 @@ application”](https://aws.amazon.com/getting-started/hands-on/build-web-app-s3
     
       - Returns to the user the translated text
 
-  - The following should work:
+  - The following should work (same code as in lambda_translate.py):
 
-\`\`\`
+```
 
 import json
 
@@ -74,7 +74,7 @@ return {
 
 }
 
-\`\`\`
+```
 
   - Click on Save
 
@@ -175,7 +175,7 @@ return {
 ![](.//media/image14.png)
 
   - In Request Body type the JSON used to test the Lambda function
-
+```
 {
 
 "sourceText": "Bonjour",
@@ -183,6 +183,7 @@ return {
 "lang": "it"
 
 }
+```
 
   - Click on Test and check the outcome
 
@@ -214,7 +215,7 @@ return {
   - **<span class="underline">Remember to put your Invoke URL pointing
     to the endpoint /translate</span>**
 
-\`\`\`
+```
 
 \<\!DOCTYPE html\>
 
@@ -354,7 +355,7 @@ API\</button\>
 
 \</html\>
 
-\`\`\`
+```
 
   - Open the HMTL page with a browser, type some text in French, type
     the target language and click Call API
