@@ -88,6 +88,7 @@ return {
   - Fill the test case with the following JSON which simulates the
     incoming JSON that the Lambda function has to process
 
+```
 {
 
 "sourceText": "Bonjour",
@@ -95,6 +96,7 @@ return {
 "lang": "it"
 
 }
+```
 
   - Click Create
 
